@@ -1,0 +1,26 @@
+src/
+public/
+node_modules/
+.vscode/
+.idea/
+
+# Config files
+vite.config.ts
+tsconfig.json
+
+# Demo files
+index.html
+src/main.ts
+src/counter.ts
+src/style.css
+src/typescript.svg
+
+# Development files
+*.log
+.DS_Store
+.env
+.env.*
+
+# Git files
+.git
+.gitignore

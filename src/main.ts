@@ -1,24 +1,62 @@
-import './style.css'
-import typescriptLogo from './typescript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.ts'
+import WheelPicker from './wheel-picker'
 
-document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
-  <div>
-    <a href="https://vite.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://www.typescriptlang.org/" target="_blank">
-      <img src="${typescriptLogo}" class="logo vanilla" alt="TypeScript logo" />
-    </a>
-    <h1>Vite + TypeScript</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite and TypeScript logos to learn more
-    </p>
-  </div>
-`
+// Date Picker
+const datePicker = new WheelPicker({
+  container: '#date-picker',
+  format: 'date',
+  initialDate: new Date(),
+  onChange: (date) => {
+    const output = document.getElementById('date-output')
+    if (output) {
+      output.innerHTML = `<strong>Selected:</strong> ${date.toLocaleDateString('en-US', {
+        weekday: 'long',
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric'
+      })}`
+    }
+  }
+})
 
-setupCounter(document.querySelector<HTMLButtonElement>('#counter')!)
+// Trigger initial display
+datePicker.setDate(new Date())
+
+// DateTime Picker
+const dateTimePicker = new WheelPicker({
+  container: '#datetime-picker',
+  format: 'datetime',
+  initialDate: new Date(),
+  onChange: (date) => {
+    const output = document.getElementById('datetime-output')
+    if (output) {
+      output.innerHTML = `<strong>Selected:</strong> ${date.toLocaleString('en-US', {
+        weekday: 'long',
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+        hour: '2-digit',
+        minute: '2-digit'
+      })}`
+    }
+  }
+})
+
+dateTimePicker.setDate(new Date())
+
+// Time Picker
+const timePicker = new WheelPicker({
+  container: '#time-picker',
+  format: 'time',
+  initialDate: new Date(),
+  onChange: (date) => {
+    const output = document.getElementById('time-output')
+    if (output) {
+      output.innerHTML = `<strong>Selected:</strong> ${date.toLocaleTimeString('en-US', {
+        hour: '2-digit',
+        minute: '2-digit'
+      })}`
+    }
+  }
+})
+
+timePicker.setDate(new Date())
