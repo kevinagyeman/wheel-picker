@@ -1,13 +1,11 @@
-# Wheel Picker
+# Easy Picker
 
-A wheel date picker component built with vanilla JavaScript/TypeScript. Framework-agnostic and works with React, Vue, Angular, Svelte, or any other frontend framework.
+An easy-to-use date and time picker component built with vanilla JavaScript/TypeScript. Framework-agnostic and works with React, Vue, Angular, Svelte, or any other frontend framework.
 
 ## Features
 
-- Scrolling wheel interface
+- Simple select-based interface
 - Multiple picker modes: Date, DateTime, Time
-- Smooth momentum scrolling
-- Touch and mouse support
 - Fully typed with TypeScript
 - Framework-agnostic (works with vanilla JS and all frameworks)
 - Zero dependencies
@@ -18,7 +16,7 @@ A wheel date picker component built with vanilla JavaScript/TypeScript. Framewor
 ## Installation
 
 ```bash
-npm install @kevinagyeman/wheel-picker
+npm install @kevinagyeman/easy-picker
 ```
 
 ## Usage
@@ -26,11 +24,11 @@ npm install @kevinagyeman/wheel-picker
 ### Vanilla JavaScript/TypeScript
 
 ```typescript
-import WheelPicker from '@kevinagyeman/wheel-picker'
-import '@kevinagyeman/wheel-picker/dist/style.css'
+import EasyPicker from '@kevinagyeman/easy-picker'
+import '@kevinagyeman/easy-picker/dist/style.css'
 
 // Create a date picker
-const picker = new WheelPicker({
+const picker = new EasyPicker({
   container: '#date-picker',
   format: 'date',
   initialDate: new Date(),
@@ -44,16 +42,16 @@ const picker = new WheelPicker({
 
 ```tsx
 import { useEffect, useRef } from 'react'
-import WheelPicker from '@kevinagyeman/wheel-picker'
-import '@kevinagyeman/wheel-picker/dist/style.css'
+import EasyPicker from '@kevinagyeman/easy-picker'
+import '@kevinagyeman/easy-picker/dist/style.css'
 
 function DatePickerComponent() {
   const containerRef = useRef<HTMLDivElement>(null)
-  const pickerRef = useRef<WheelPicker | null>(null)
+  const pickerRef = useRef<EasyPicker | null>(null)
 
   useEffect(() => {
     if (containerRef.current) {
-      pickerRef.current = new WheelPicker({
+      pickerRef.current = new EasyPicker({
         container: containerRef.current,
         format: 'date',
         initialDate: new Date(),
@@ -81,14 +79,14 @@ function DatePickerComponent() {
 
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
-import WheelPicker from '@kevinagyeman/wheel-picker'
-import '@kevinagyeman/wheel-picker/dist/style.css'
+import EasyPicker from '@kevinagyeman/easy-picker'
+import '@kevinagyeman/easy-picker/dist/style.css'
 
 const pickerContainer = ref(null)
 let picker = null
 
 onMounted(() => {
-  picker = new WheelPicker({
+  picker = new EasyPicker({
     container: pickerContainer.value,
     format: 'date',
     initialDate: new Date(),
@@ -108,8 +106,8 @@ onUnmounted(() => {
 
 ```typescript
 import { Component, ElementRef, ViewChild, AfterViewInit, OnDestroy } from '@angular/core'
-import WheelPicker from '@kevinagyeman/wheel-picker'
-import '@kevinagyeman/wheel-picker/dist/style.css'
+import EasyPicker from '@kevinagyeman/easy-picker'
+import '@kevinagyeman/easy-picker/dist/style.css'
 
 @Component({
   selector: 'app-date-picker',
@@ -117,10 +115,10 @@ import '@kevinagyeman/wheel-picker/dist/style.css'
 })
 export class DatePickerComponent implements AfterViewInit, OnDestroy {
   @ViewChild('pickerContainer') pickerContainer!: ElementRef
-  private picker?: WheelPicker
+  private picker?: EasyPicker
 
   ngAfterViewInit() {
-    this.picker = new WheelPicker({
+    this.picker = new EasyPicker({
       container: this.pickerContainer.nativeElement,
       format: 'date',
       initialDate: new Date(),
@@ -141,7 +139,7 @@ export class DatePickerComponent implements AfterViewInit, OnDestroy {
 ### Constructor Options
 
 ```typescript
-interface WheelPickerOptions {
+interface EasyPickerOptions {
   // Container element or CSS selector
   container: HTMLElement | string
 
@@ -194,7 +192,7 @@ picker.destroy()
 Shows month, day, and year columns.
 
 ```typescript
-new WheelPicker({
+new EasyPicker({
   container: '#picker',
   format: 'date'
 })
@@ -204,7 +202,7 @@ new WheelPicker({
 Shows month, day, year, hour, and minute columns.
 
 ```typescript
-new WheelPicker({
+new EasyPicker({
   container: '#picker',
   format: 'datetime'
 })
@@ -214,7 +212,7 @@ new WheelPicker({
 Shows hour and minute columns only.
 
 ```typescript
-new WheelPicker({
+new EasyPicker({
   container: '#picker',
   format: 'time'
 })

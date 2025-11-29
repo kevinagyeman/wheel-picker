@@ -1,7 +1,7 @@
-import WheelPicker from "./wheel-picker";
+import EasyPicker from "./easy-picker";
 
 // Date Picker
-const datePicker = new WheelPicker({
+const datePicker = new EasyPicker({
 	container: "#date-picker",
 	format: "date",
 	initialDate: new Date(),
@@ -25,7 +25,7 @@ const datePicker = new WheelPicker({
 datePicker.setDate(new Date());
 
 // DateTime Picker
-const dateTimePicker = new WheelPicker({
+const dateTimePicker = new EasyPicker({
 	container: "#datetime-picker",
 	format: "datetime",
 	initialDate: new Date(),
@@ -50,7 +50,7 @@ const dateTimePicker = new WheelPicker({
 dateTimePicker.setDate(new Date());
 
 // Time Picker
-const timePicker = new WheelPicker({
+const timePicker = new EasyPicker({
 	container: "#time-picker",
 	format: "time",
 	initialDate: new Date(),

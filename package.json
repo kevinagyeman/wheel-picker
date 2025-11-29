@@ -1,16 +1,16 @@
 {
-	"name": "@kevinagyeman/wheel-picker",
+	"name": "@kevinagyeman/easy-picker",
 	"version": "1.0.0",
-	"description": "Wheel date picker component compatible with all frontend frameworks",
+	"description": "Easy picker component for dates, times, and datetimes - compatible with all frontend frameworks",
 	"type": "module",
-	"main": "./dist/wheel-picker.umd.js",
-	"module": "./dist/wheel-picker.js",
-	"types": "./dist/wheel-picker.d.ts",
+	"main": "./dist/easy-picker.umd.js",
+	"module": "./dist/easy-picker.js",
+	"types": "./dist/easy-picker.d.ts",
 	"exports": {
 		".": {
-			"types": "./dist/wheel-picker.d.ts",
-			"import": "./dist/wheel-picker.js",
-			"require": "./dist/wheel-picker.umd.js"
+			"types": "./dist/easy-picker.d.ts",
+			"import": "./dist/easy-picker.js",
+			"require": "./dist/easy-picker.umd.js"
 		},
 		"./dist/style.css": "./dist/style.css"
 	},
@@ -18,17 +18,19 @@
 		"dist"
 	],
 	"keywords": [
-		"wheel-picker",
+		"easy-picker",
 		"date-picker",
+		"time-picker",
+		"datetime-picker",
 		"vanilla-js",
 		"framework-agnostic",
-		"datepicker"
+		"picker"
 	],
 	"author": "",
 	"license": "MIT",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/kevinagyeman/wheel-picker.git"
+		"url": "https://github.com/kevinagyeman/easy-picker.git"
 	},
 	"scripts": {
 		"dev": "vite",

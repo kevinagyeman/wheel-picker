@@ -5,9 +5,9 @@ import dts from "vite-plugin-dts";
 export default defineConfig({
 	build: {
 		lib: {
-			entry: path.resolve(__dirname, "src/wheel-picker.ts"),
-			name: "WheelPicker",
-			fileName: (format) => `wheel-picker.${format === "es" ? "js" : "umd.js"}`,
+			entry: path.resolve(__dirname, "src/easy-picker.ts"),
+			name: "EasyPicker",
+			fileName: (format) => `easy-picker.${format === "es" ? "js" : "umd.js"}`,
 			formats: ["es", "umd"],
 		},
 		rollupOptions: {
@@ -24,7 +24,7 @@ export default defineConfig({
 	},
 	plugins: [
 		dts({
-			include: ["src/wheel-picker.ts"],
+			include: ["src/easy-picker.ts"],
 			rollupTypes: true,
 		}),
 	],
