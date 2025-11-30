@@ -6,12 +6,15 @@ An easy-to-use date and time picker component built with vanilla JavaScript/Type
 
 - Simple select-based interface
 - Multiple picker modes: Date, DateTime, Time
+- **Configurable return formats** (Date object, ISO string, timestamp, date-string)
+- **Timezone-safe** date handling (prevents off-by-one day issues)
 - Fully typed with TypeScript
 - Framework-agnostic (works with vanilla JS and all frameworks)
 - Zero dependencies
 - Responsive and mobile-friendly
 - Dark mode support
 - Customizable date ranges
+- Custom styling support (Tailwind, Bootstrap, etc.)
 
 ## Installation
 
@@ -388,6 +391,21 @@ npm run build
 # Preview production build
 npm run preview
 ```
+
+## Changelog
+
+### v1.1.0 (Latest)
+- ✨ Added `returnFormat` option to choose output format (date, iso, timestamp, date-string)
+- ✨ Added `getRawDate()` method to always get Date object
+- 🐛 Fixed timezone bug by setting date picker to noon (prevents day shifting)
+- 📝 Updated TypeScript types for `onChange` callback
+
+### v1.0.0
+- 🎉 Initial release
+- Date, DateTime, and Time picker modes
+- Framework-agnostic vanilla JS/TypeScript
+- Custom styling support
+- Dark mode support
 
 ## License
 

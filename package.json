@@ -28,7 +28,14 @@
 		"datetime-picker",
 		"vanilla-js",
 		"framework-agnostic",
-		"picker"
+		"picker",
+		"typescript",
+		"react",
+		"vue",
+		"angular",
+		"svelte",
+		"select-picker",
+		"timezone-safe"
 	],
 	"author": "Kevin Agyeman <kevinagyemann@gmail.com>",
 	"license": "MIT",
