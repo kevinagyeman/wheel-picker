@@ -28,7 +28,7 @@ npm install @kevinagyeman/easy-picker
 
 ```typescript
 import EasyPicker from '@kevinagyeman/easy-picker'
-import '@kevinagyeman/easy-picker/dist/style.css'
+import '@kevinagyeman/easy-picker/style.css'
 
 // Create a date picker
 const picker = new EasyPicker({
@@ -46,7 +46,7 @@ const picker = new EasyPicker({
 ```tsx
 import { useEffect, useRef, useState } from 'react'
 import EasyPicker from '@kevinagyeman/easy-picker'
-import '@kevinagyeman/easy-picker/dist/style.css'
+import '@kevinagyeman/easy-picker/style.css'
 
 function DatePickerComponent() {
   const [date, setDate] = useState(new Date())
@@ -92,7 +92,7 @@ function DatePickerComponent() {
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
 import EasyPicker from '@kevinagyeman/easy-picker'
-import '@kevinagyeman/easy-picker/dist/style.css'
+import '@kevinagyeman/easy-picker/style.css'
 
 const pickerContainer = ref(null)
 let picker = null
@@ -119,7 +119,7 @@ onUnmounted(() => {
 ```typescript
 import { Component, ElementRef, ViewChild, AfterViewInit, OnDestroy } from '@angular/core'
 import EasyPicker from '@kevinagyeman/easy-picker'
-import '@kevinagyeman/easy-picker/dist/style.css'
+import '@kevinagyeman/easy-picker/style.css'
 
 @Component({
   selector: 'app-date-picker',
@@ -394,7 +394,10 @@ npm run preview
 
 ## Changelog
 
-### v1.1.1 (Latest)
+### v1.1.2 (Latest)
+- 🐛 Fixed CSS import path (now use `@kevinagyeman/easy-picker/style.css`)
+
+### v1.1.1
 - ✨ Added `returnFormat` option to choose output format (date, iso, timestamp, date-string)
 - ✨ Added `getRawDate()` method to always get Date object
 - 🐛 Fixed timezone bug by setting date picker to noon (prevents day shifting)

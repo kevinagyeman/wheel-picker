@@ -1,6 +1,6 @@
 {
 	"name": "@kevinagyeman/easy-picker",
-	"version": "1.1.1",
+	"version": "1.1.2",
 	"description": "Easy picker component for dates, times, and datetimes - compatible with all frontend frameworks",
 	"type": "module",
 	"main": "./dist/easy-picker.umd.js",
@@ -12,7 +12,7 @@
 			"import": "./dist/easy-picker.js",
 			"require": "./dist/easy-picker.umd.js"
 		},
-		"./dist/style.css": "./dist/style.css"
+		"./style.css": "./dist/style.css"
 	},
 	"files": [
 		"dist"
