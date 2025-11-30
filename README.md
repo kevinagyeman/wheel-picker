@@ -394,7 +394,7 @@ npm run preview
 
 ## Changelog
 
-### v1.1.0 (Latest)
+### v1.1.1 (Latest)
 - ✨ Added `returnFormat` option to choose output format (date, iso, timestamp, date-string)
 - ✨ Added `getRawDate()` method to always get Date object
 - 🐛 Fixed timezone bug by setting date picker to noon (prevents day shifting)
